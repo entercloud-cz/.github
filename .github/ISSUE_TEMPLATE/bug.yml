@@ -1,0 +1,40 @@
+name: Bug
+description: Something behaves wrongly — wrong output, an error, a broken screen
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bug report is useful in proportion to how precisely someone else can reproduce it.
+        The symptom matters more than the diagnosis.
+  - type: textarea
+    id: symptom
+    attributes:
+      label: What happens
+      description: The observable symptom — the error text, the wrong number, the blank screen. Paste it rather than describing it.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen instead
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: Steps, inputs, or the request that triggers it. Say if it is intermittent — that is a fact about the bug, not a gap in the report.
+    validations: { required: true }
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Environment, tenant, version or commit if known.
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "P0 — wrong money, wrong data, or a security hole"
+        - "P1 — someone cannot do their job"
+        - "P2 — annoying, has a workaround"
+    validations: { required: true }
