@@ -6,15 +6,15 @@ Closes #
 
 ## Checks
 
-- [ ] Tests pass.
+<!-- Only things no machine reports. CI says whether tests pass; the drift check says
+     whether a vendored file was edited; CODEOWNERS routes review. None of those needs
+     a human to assert it here. -->
+
 - [ ] Anything touching data **fails closed** — no silent fallback to fewer rows, to a
       default value, or to "absent" on an error that was not confirmed as absence.
 - [ ] A schema migration, if any, is idempotent and guarded, and this PR body states the
       exact command to run it.
 - [ ] Docs updated where behaviour changed, in the one document whose job it is.
-- [ ] *(repos that vendor `dev-standards`)* vendored files untouched — `dev-standards check`.
-- [ ] *(repos with lanes/owners)* I stayed in the files my lane owns, or the other owner is
-      tagged and knows why.
 
 ## Maintainer steps after merge
 

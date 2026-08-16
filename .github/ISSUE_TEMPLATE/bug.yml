@@ -29,12 +29,14 @@ body:
     attributes:
       label: Where
       description: Environment, tenant, version or commit if known.
+  # Optional on purpose: a reporter who cannot judge severity should still file the bug,
+  # and the names here are only the common default (a project may name its own).
   - type: dropdown
     id: severity
     attributes:
       label: Severity
+      description: Leave it blank if you are not sure — a triager will set it.
       options:
-        - "P0 — wrong money, wrong data, or a security hole"
-        - "P1 — someone cannot do their job"
-        - "P2 — annoying, has a workaround"
-    validations: { required: true }
+        - "Wrong money, wrong data, or a security hole"
+        - "Someone cannot do their job"
+        - "Annoying, has a workaround"
