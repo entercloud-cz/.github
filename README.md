@@ -9,6 +9,11 @@ so these are floors, not mandates.
 | `.github/ISSUE_TEMPLATE/task.yml` · `bug.yml` | every repo with no `ISSUE_TEMPLATE` of its own |
 | `.github/PULL_REQUEST_TEMPLATE.md` | every repo with no PR template of its own |
 | `CONTRIBUTING.md` | every repo with no `CONTRIBUTING.md` of its own |
+| `SECURITY.md` | every repo with no `SECURITY.md` of its own |
+
+**Adding a file here means adding a row above.** This table is the only place that
+enumerates what the organisation actually serves, so a file missing from it is a file
+nobody knows exists.
 
 Nothing here names a product, a person, a label or a path. That is the bar for adding
 anything: if it needs one project's vocabulary, it belongs in that project's own files.
