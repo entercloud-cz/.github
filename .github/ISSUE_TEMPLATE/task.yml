@@ -27,15 +27,18 @@ body:
     attributes:
       label: Likely files (and their owning lane)
       description: What tells the other lane whether this touches them.
+  # Optional, and the names are only the common default: a project may call its priority
+  # labels something else (dev-standards makes the vocabulary configurable). Forcing a
+  # choice from a scheme the repo might not use is how a form starts collecting noise.
   - type: dropdown
     id: priority
     attributes:
       label: Priority
+      description: Skip it if this repo names its priorities differently — the label on the issue is what counts.
       options:
-        - "P0 — correctness or security: wrong money, wrong data, a hole"
-        - "P1 — user-visible breakage or a scale blocker"
-        - "P2 — debt / cosmetic / waiting on a measured trigger"
-    validations: { required: true }
+        - "Correctness or security — wrong money, wrong data, a hole"
+        - "User-visible breakage or a scale blocker"
+        - "Debt / cosmetic / waiting on a measured trigger"
   - type: input
     id: source
     attributes:

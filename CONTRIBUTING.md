@@ -46,4 +46,5 @@ issue tooling — live in [`entercloud-cz/dev-standards`](https://github.com/ent
 Repos **vendor** them (copies committed, version pinned) so a clone works with no setup.
 
 Change a shared file **there**, not in the consumer: a local edit is overwritten by the next
-update and never reaches the other repos. A CI check fails the PR when that happens.
+update and never reaches the other repos. Where the repo installed the drift check, CI fails
+on it — but that check is a seatbelt, not a lock, so do not rely on it to notice for you.
