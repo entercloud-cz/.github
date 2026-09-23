@@ -1,46 +1,35 @@
 name: Task
-description: Work that will change the repository
+type: Task
+title: "[Task]: "
+projects: ["entercloud-cz/4"]
+description: Thrify product improvement ideas and tasks.
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Everything below exists so the next person can act without re-deriving your
-        analysis. See the `issue-flow` skill for the discipline.
+        Task's purpose is to share ideas to improve the Thrify product or tasks to be done to deliver it.
+        Task is stored by default in __Intake__ in [following view](https://github.com/orgs/entercloud-cz/projects/4/views/2).
   - type: textarea
-    id: why
+    id: problem-statement
     attributes:
-      label: Why it matters
-      description: One or two sentences of impact — what breaks, which number is wrong, what a user cannot do. Not "improve X".
+      label: Problem statement
+      description: Description of idea to implement, task to complete, or problem to solve.
     validations: { required: true }
   - type: textarea
-    id: done
+    id: benefit
     attributes:
-      label: Done when
-      description: Verifiable criteria, one per line, including how it will be verified.
-      placeholder: |
-        - [ ] …
-        - [ ] a test / a count / a live check covers it
+      label: Benefit of the task
+      description: Description of the expected benefit or value of completing this task.
     validations: { required: true }
-  - type: input
-    id: files
-    attributes:
-      label: Likely files (and their owning lane)
-      description: What tells the other lane whether this touches them.
-  # Optional, and the names are only the common default: a project may call its priority
-  # labels something else (dev-standards makes the vocabulary configurable). Forcing a
-  # choice from a scheme the repo might not use is how a form starts collecting noise.
   - type: dropdown
-    id: priority
+    id: impact
     attributes:
-      label: Priority
-      description: Skip it if this repo names its priorities differently — the label on the issue is what counts.
+      label: Impact of the task
+      description: What is the expected impact of completing this task.
       options:
-        - "Correctness or security — wrong money, wrong data, a hole"
-        - "User-visible breakage or a scale blocker"
-        - "Debt / cosmetic / waiting on a measured trigger"
-  - type: input
-    id: source
-    attributes:
-      label: Source
-      description: Where this came from — a work-document section, a request with its date, or "found while working on #n".
+        - All customers
+        - Group of customers
+        - Single customer
+        - Internal
+    validations: { required: true }
